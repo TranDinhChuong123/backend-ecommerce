@@ -1,0 +1,53 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://trandinhchuongcc:muOmwEJTyHfGnLMM@cluster0.bstfhlh.mongodb.net/ecommmer-shop
+      database: ecommmer-shop
+
+  mail:
+    default-encoding: UTF-8
+    host: smtp.gmail.com
+    username: trandinhchuongcc@gmail.com
+    password: ojpu ivfq ydmy zclf
+    port: 587
+    protocol: smtp
+    test-connection: false
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML
+    encoding: UTF-8
+
+
+
+application:
+  security:
+    jwt:
+      secret-key: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B597066666666666666666666666666666
+      expiration: 2592000000    # 2 days
+      refresh-token:
+        expiration: 2592000000  # 7 days
+
+
+stripe:
+  secret:
+    key: sk_test_51PmBsgJw1ld3bFL636LtPkMfdelCA8vZskaygsO0z1mgzQeerLKclRfUcAFoNOaoJ0xtPGl0EVftVlD6AsOP4Dce00bVS5rjNc
+  webhook:
+    secret: whsec_1d0ae179d23d3815f628202945c0d5b42a2b6564c32f2cb8674d7bf42e56db59
+
+
+cloudinary:
+  cloud-name: dmubqjnjd
+  api-key: 254489945186982
+  api-secret: M2s6tCOx3aN8mQ6pC_OSvVQZ9_c
+
+
+

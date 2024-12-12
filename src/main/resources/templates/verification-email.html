@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Mã Xác Thực của Bạn</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .email-container {
+            width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .email-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .email-header h2 {
+            color: #4CAF50;
+            font-size: 24px;
+        }
+
+
+        .email-content {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .verification-code {
+            font-size: 40px;
+            font-weight: bold;
+            color: #4CAF50;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .footer {
+            font-size: 14px;
+            color: #888;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div class="email-container">
+    <div class="email-header">
+        <h2>Mã Xác Thực của Bạn</h2>
+    </div>
+    <div class="email-content">
+        <p>Xin chào,</p>
+        <p>Đây là mã xác thực của bạn từ <strong>Economart</strong>:</p>
+        <div style="width: 100%; display: flex ; justify-content: center ; align-content: center">
+            <p  style=" font-size: 40px;
+            font-weight: bold;
+            color: #4CAF50;
+            padding-left: 250px;
+            padding-top:10px ;
+            padding-bottom:10px ;
+            border-radius: 5px;
+            margin-top: 10px; align-items: center" th:text="${verificationCode}"
+            ></p>
+        </div>
+        <p>Mã này sẽ hết hạn sau 10 phút.</p>
+        <p>Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi!</p>
+    </div>
+    <div class="footer">
+        <p>Bạn nhận được email này vì đã đăng ký tài khoản tại <strong><a href="https://www.economart.com">Economart</a></strong>.</p>
+    </div>
+</div>
+</body>
+</html>

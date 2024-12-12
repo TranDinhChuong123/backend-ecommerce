@@ -1,0 +1,44 @@
+
+
+### register SHOP
+POST http://localhost:8080/api/v1/auth/register
+Content-Type: application/json
+
+{
+  "name": "admin",
+  "username": "admi111n@example.com",
+  "password": "1",
+  "email": "admi111n@example.com",
+  "role": "SHOP"
+}
+
+### register CUSTOMER
+POST http://localhost:8080/api/v1/auth/register
+Content-Type: application/json
+
+{
+  "name": "user",
+  "username": "1",
+  "password": "1",
+  "email": "1",
+  "role": "CUSTOMER"
+}
+
+
+### login
+POST http://localhost:8080/api/v1/auth/login
+Content-Type: application/json
+
+{
+  "username": "trandinhchuong12c2mk@gmail.com",
+  "password": "trandinhchuong12c2mk@gmail.com"
+}
+
+### userExistsByEmail
+POST http://localhost:8080/api/v1/auth/userExists
+Content-Type: application/json
+
+{
+  "email": "user132@example.com"
+}
+

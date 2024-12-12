@@ -1,0 +1,64 @@
+
+
+### findProductsWithFilters
+POST http://localhost:8080/api/v1/product
+Content-Type: application/json
+
+{
+  "productFilter": {
+    "discountPercent": 30
+  }
+}
+
+
+
+### Create Product
+POST http://localhost:8080/api/v1/product/create
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzI1OTQyNTgyLCJleHAiOjE3MjYxMTUzODJ9.q8qWqAuE3crsyJwKtnBd7DLLb-4wu0iBdVVpBzTouAY
+Content-Type: application/json
+
+{
+  "name": "iPhone 14 Pro",
+  "thumb": "https://example.com/images/smartphone3.jpg",
+  "description": "A high-quality smartphone with advanced features.",
+  "category": "Smartphones",
+  "price": 1000,
+  "discountPrice": 900,
+  "tags": ["smartphone", "Apple", "iPhone"],
+  "slug": "iphone-14-pro",
+  "quantity": 200,
+  "ratingsAverage": 4.5,
+  "metadata": {
+    "brand": "Apple",
+    "model": "iPhone 14",
+    "warranty": "12 months",
+    "supplier": "Apple Inc."
+  },
+  "productVariations": [
+    {
+      "variationName": "64GB",
+      "variationAttributes": {
+        "color": "black",
+        "price": 450,
+        "stock": 50,
+        "reviews": [
+          {
+            "rating": 4,
+            "comment": "Good value for money."
+          }
+        ],
+        "images": [
+          "https://example.com/images/smartphone3.jpg",
+          "https://example.com/images/smartphone4.jpg"
+        ]
+      }
+    }
+  ],
+  "isPublished": true,
+  "isDraft": false
+}
+
+### findProductById
+GET http://localhost:8080/api/v1/product/66ee7573c0c5dc29dc924efd
+
+
