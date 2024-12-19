@@ -15,6 +15,13 @@ public class CategoryServiceImpl implements CategoryService {
     private final CategoryRepository categoryRepository;
 
     @Override
+    public Category updateCategoryStatus(String categoryId, CategoryStatus categoryStatus) {
+        Category category = getCategoryById(categoryId);
+        category.setStatus(categoryStatus);
+        return categoryRepository.save(category);
+    }
+
+    @Override
     public List<Category> getAllCategories() {
         return categoryRepository.findAll();
     }

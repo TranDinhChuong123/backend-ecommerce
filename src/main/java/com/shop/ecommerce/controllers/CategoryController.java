@@ -2,6 +2,7 @@ package com.shop.ecommerce.controllers;
 
 import com.shop.ecommerce.models.Category;
 import com.shop.ecommerce.models.enums.CategoryStatus;
+import com.shop.ecommerce.requests.CategoryStatusRequest;
 import com.shop.ecommerce.responses.ApiResponse;
 import com.shop.ecommerce.services.CategoryService;
 import lombok.RequiredArgsConstructor;
@@ -35,6 +36,18 @@ public class CategoryController {
                 ? "Category retrieved successfully"
                 : "Category not found";
         return new ApiResponse<>(200, message, category);
+    }
+
+    @PutMapping("/update-status/{categoryId}")
+    public ApiResponse<Category> getAllCategories(
+            @PathVariable String categoryId,
+            @RequestBody CategoryStatusRequest statusRequest
+    ) {
+        return new ApiResponse<>(
+                200,
+                "Categories retrieved successfully",
+                categoryService.updateCategoryStatus(categoryId, statusRequest.getStatus() )
+        );
     }
 
     @GetMapping("/slug/{slug}")

@@ -10,6 +10,8 @@ public interface CategoryService {
     Category getCategoryById(String id);
     Category getCategoryBySlug(String slug);
 
+    Category updateCategoryStatus(String categoryId, CategoryStatus categoryStatus);
+
     List<Category> getCategoriesByStatus(CategoryStatus status);
     Category createCategory(Category category);
     Category updateCategory(String id, Category category);
